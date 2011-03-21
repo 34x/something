@@ -1,7 +1,9 @@
 #!/bin/bash
+#Ищет по коммитам фразу
+#gitgrep.sh pattern N где N лимит логов
 echo 'Start'
 
-LOGS=`git log -n4 | grep -E '[0-9a-zA-Z]{40}'`
+LOGS=`git log -n$2 | grep -E '[0-9a-zA-Z]{40}'`
 
 for  LOG in $LOGS ;
 do
